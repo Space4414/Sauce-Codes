@@ -1,25 +1,54 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <title> Sauce Codes </title>
-    <h3 aling="center" Sauce Codes></h3>
-    <body>
-        <h4>JAV Codes:</h4>
-        <ol type="1">
-         <li>AUKG-151(Yuri)</li><p></p>
-         <li>NHDTA-807(Yuri)</li><p></p>  
-         <li>AUKG-182(Mother-in-law and Daughter-in-law Also Yuri)</li><p></p>
-         <h4>Doujinshi Codes, use them in this <a href="www.hentairead.com">website</a>. Codes: ↓↓↓↓ </h4> 
-         <ol type="1">
-             <li>#232206</li><p></p>
-             <li>#258673</li><p></p>
-             <li>#257163</li><p></p>
-             <li>#188843</li><p></p>
-             <li>#251752</li><p></p>
-             There's Some Netorare, Incest, Yuri and Futanari in those codes. 
-             Enjoy Reading / Watching
-         </ol>
-         
-   
-       </ol>       
-    </body>
+<head>
+  <title>Sum & Average Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+    input[type=number] {
+      width: 60px;
+      margin: 5px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Enter 20 Numbers</h2>
+
+<div id="inputs"></div>
+
+<button onclick="calculate()">Calculate</button>
+
+<div id="result"></div>
+
+<script>
+  // Create 20 input fields
+  const container = document.getElementById("inputs");
+  for (let i = 0; i < 20; i++) {
+    const input = document.createElement("input");
+    input.type = "number";
+    input.id = `num${i}`;
+    container.appendChild(input);
+  }
+
+  function calculate() {
+    let sum = 0;
+    for (let i = 0; i < 20; i++) {
+      const val = parseFloat(document.getElementById(`num${i}`).value);
+      sum += isNaN(val) ? 0 : val;
+    }
+    const avg = sum / 20;
+    document.getElementById("result").innerHTML = 
+      `Sum: ${sum} <br> Average: ${avg.toFixed(2)}`;
+  }
+</script>
+
+</body>
 </html>
